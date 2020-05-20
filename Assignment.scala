@@ -18,19 +18,14 @@ object Assignment{
     }
 
     def shop(num:Int) = {
-    	val price:Double = 24.95
-    	val discount:Double = 40/100
-    	val shippingCost50:Double = 3
-    	val shippingCostMore:Double = 0.75
-
-    	var wholeSalePrice:Double = 0
-
-    	if(num <= 50){
-    		wholeSalePrice = (num*price) - (num*price)*discount + (num*shippingCost50)
-    	}else{
-    		wholeSalePrice = (num*price) - (num*price)*discount + (num-50)*shippingCostMore + 50*shippingCost50
-    	}
-
-    	printf("Total cost is " + wholeSalePrice.toString + "/=\n")
+    	
+    	val total:Double = bookPrice(num) + shippingCost(num) - discount(num)
+    	printf("Total price is " + total.toString + "/=\n")
     }
+
+    def discount(amount:Double):Double = amount * 0.4
+
+    def shippingCost(x:Int):Double = 3*x + (x-50)*0.75
+
+    def bookPrice(x:Int):Double = x*24.95
 }

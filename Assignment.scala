@@ -2,7 +2,7 @@ object Assignment{
     def main(args: Array[String]) = { 
     	convert(35)
     	volume(5) 
-        shop(50) 
+        shop(60) 
     }
 
     def convert(deg:Double) = {
@@ -18,14 +18,22 @@ object Assignment{
     }
 
     def shop(num:Int) = {
-    	
     	val total:Double = bookPrice(num) + shippingCost(num) - discount(num)
     	printf("Total price is " + total.toString + "/=\n")
     }
 
-    def discount(amount:Double):Double = amount * 0.4
+    def discount(amount:Double):Double = amount*0.4
 
-    def shippingCost(x:Int):Double = 3*x + (x-50)*0.75
+    def shippingCost(x:Int):Double = {
+    	var result:Double = 0
+    	if(x > 50){
+    		result = 3*x + (x-50)*0.75
+    	}else{
+    		result = 3*x 
+    	}
+
+    	return result
+    }
 
     def bookPrice(x:Int):Double = x*24.95
 }

@@ -7,17 +7,17 @@ object Assignment{
     }
 
     //problem-1
-    def convert(deg:Double) = {
+    def convert(deg:Double):Double = {
 		deg*1.8000 + 32.00 	
     } 
 
     //problem-2
-    def volume(rad:Double) = {
+    def volume(rad:Double):Double = {
     	4*math.Pi*rad*rad*rad/3	
     }
 
     //problem-3
-    def shop(num:Int) = {
+    def shop(num:Int):Double = {
     	bookPrice(num) + shippingCost(num) - discount(num)
     	
     }
@@ -30,5 +30,5 @@ object Assignment{
     	}
     }
     def bookPrice(x:Int):Double = x*24.95
-    
+
 }

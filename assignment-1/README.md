@@ -1,1 +1,0 @@
-# scala-assignment-1

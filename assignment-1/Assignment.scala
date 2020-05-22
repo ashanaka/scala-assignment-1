@@ -31,7 +31,6 @@ object Assignment{
     	}else{
     		result = 3*x 
     	}
-
     	return result
     }
 

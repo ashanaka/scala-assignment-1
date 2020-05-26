@@ -28,7 +28,7 @@ object Assignment2{
         attendees(price)*price
     }
     def cost(price:Int):Int = {
-        500 + attendees(price)
+        500 + 3*attendees(price)
     }
     def profit(price:Int):Int = {
         revenue(price) - cost(price)

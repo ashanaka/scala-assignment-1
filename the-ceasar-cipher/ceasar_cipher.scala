@@ -7,7 +7,7 @@ object Ceasar_chiper{
 		var userInput = scala.io.StdIn.readLine();
 		userInput.foreach{i=>print(E(i, 3, letters))};
 
-		var userInput = scala.io.StdIn.readLine();
+		userInput = scala.io.StdIn.readLine();
 		userInput.foreach{i=>print(D(i, 3, letters))};
 	}
 

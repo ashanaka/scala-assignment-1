@@ -10,8 +10,8 @@ object MyApp extends App {
 
 class Rational(n:Int, d:Int) {
 	require(d>0, "Denom must be greater than 0");
-	def numer=n/gcd(n,d)
-	def denom=d/gcd(n,d)
+	def numer=n/gcd(Math.abs(n),d)
+	def denom=d/gcd(Math.abs(n),d)
 	def this(n:Int)=this(n, 1)
 
 	private def gcd(a:Int, b:Int):Int = if(b==0) a else gcd(b, a%b)
